@@ -56,12 +56,10 @@ function hasDuplicates(array) {
         for (let j = i + 1; j < array.length; j++) {
             if (array[i] === array[j]) {
                 return true
-            } else {
-                return false
-            }
+            } 
         }
-
     }
+    return false
 }
 
 
