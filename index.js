@@ -50,6 +50,20 @@ function unshift(arr, item) {
 
 //small change
 
+function hasDuplicates(array) {
+    //loop through array to see if there is a duplicate
+    for (let i = 0; i < array.length; i++) {  
+        for (let j = i + 1; j < array.length; j++) {
+            if (array[i] === array[j]) {
+                return true
+            } else {
+                return false
+            }
+        }
+
+    }
+}
 
 
-module.exports = { push, pop, shift, unshift };
+
+module.exports = { push, pop, shift, unshift, hasDuplicates };
