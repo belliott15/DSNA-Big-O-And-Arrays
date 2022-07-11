@@ -10,4 +10,17 @@ function push(arr, item) {
     
 }
 
-module.exports = { push };
+function pop(arr) {
+    //loop through an array to reach end item
+    // const end = arr.length - 1;
+    for (let i = 0; i < arr.length; i++) {
+        //remove the last item of the array
+        if(arr.length === 0) return null
+        // arr[end] = null;
+        arr.length = arr.length -1;
+        return arr.length;
+    }
+
+}
+
+module.exports = { push, pop };
