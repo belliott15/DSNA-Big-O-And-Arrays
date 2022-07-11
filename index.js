@@ -23,6 +23,22 @@ function pop(arr) {
 
 }
 
+function shift(arr) {
+    //remove first item from array
+    const first = arr[0];
+    arr[0] = null
+    //loop through items and move them backward in the array
+    for (let i = 0; i < arr.length; i++){
+        if(arr[0] === null ) {
+             return  {...arr}
+
+            }
+            
+        }
+    }
+    //return removed element
+    return arr;
+}
 
 
-module.exports = { push, pop };
+module.exports = { push, pop, shift };

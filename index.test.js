@@ -1,4 +1,4 @@
-const { push, pop } = require("./index.js");
+const { push, pop, shift } = require("./index.js");
 
 describe("push", () => {
   it("should add an element to an array", () => {
