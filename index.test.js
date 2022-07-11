@@ -1,4 +1,4 @@
-const { push, pop, shift } = require("./index.js");
+const { push, pop, unshift } = require("./index.js");
 
 describe("push", () => {
   it("should add an element to an array", () => {
@@ -18,11 +18,20 @@ describe("pop", () => {
   });
 });
 
-describe("shift", () => {
-  it("should remove the first element of an array", () => {
+// describe("shift", () => {
+//   it("should remove the first element of an array", () => {
+//      const arr = ["a", "b", "c", "d", "e"];
+//      expect(shift(arr)).toBe("a");
+//      expect(arr.length).toBe(4);
+//      expect(arr[0]).toBe("b");
+//    });
+//  });
+
+ describe("unshift", () => {
+  it("should add a new first element to an array", () => {
      const arr = ["a", "b", "c", "d", "e"];
-     expect(shift(arr)).toBe("a");
-     expect(arr.length).toBe(4);
-     expect(arr[0]).toBe("b");
+     expect(unshift(arr, "x")).toBe("x");
+     expect(arr.length).toBe(6);
+     expect(arr[0]).toBe("x");
    });
  });

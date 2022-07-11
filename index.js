@@ -23,22 +23,34 @@ function pop(arr) {
 
 }
 
-function shift(arr) {
-    //remove first item from array
-    const first = arr[0];
-    arr[0] = null
-    //loop through items and move them backward in the array
-    for (let i = 0; i < arr.length; i++){
-        if(arr[0] === null ) {
-             return  {...arr}
+// function shift(arr) {
+//     //remove first item from array
+//     const first = arr[0];
+//     arr[0] = null
+//     //loop through items and move them backward in the array
+//     for (let i = 0; i < arr.length; i++){
+//         if(arr[0] === null ) {
+//              return  {...arr}
 
-            }
+//             }
             
-        }
+//         }
+//     }
+//     //return removed element
+//     return arr;
+// }
+
+function unshift(arr, item) {
+    //loop through items and move them backward in the array
+    // arr.length = arr.length + 1;
+    for (let i = arr.length - 1; i >= 0; i--) {
+        arr[i + 1] = arr[i];
     }
-    //return removed element
-    return arr;
+    //add a new item to the beginning of array
+    arr[0] = item;
+    return arr[0];
 }
 
 
-module.exports = { push, pop, shift };
+
+module.exports = { push, pop, unshift };
